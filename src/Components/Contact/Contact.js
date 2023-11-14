@@ -47,7 +47,7 @@ const Contact = () => {
                   <Link to="https://github.com/ChelluriBhanuPrakash" target='_blank' rel="noopener noreferrer"><BsGithub className='lin' /></Link>
                   <Link to="https://wa.me/919030400669" target='_blank' rel="noopener noreferrer"><BsWhatsapp className='lin'/></Link>
                 </div>
-                <a href="./Bhanu.pdf" download='Bhanu-Resume.pdf' className="btn btn2">Download CV</a>
+                <a href="https://drive.google.com/file/d/1_-3zq34z8N1KWM1opVnIrhA-anoisqH-/view?usp=sharing" target='_blank' rel="noreferrer noopener" download className="btn btn2">Download CV</a>
               </center>
             </div>
             <div className="contact-right">
