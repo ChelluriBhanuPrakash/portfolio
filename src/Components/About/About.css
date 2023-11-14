@@ -1,0 +1,258 @@
+#about{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .about-col-1 section  */
+.about-col-1{
+    flex-basis: 35%;
+}
+/* img section  */
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    opacity: 0;
+    animation: slideRight 0.8s ease-in-out forwards;
+    animation-delay: .8s;
+}
+@keyframes slideRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* .about-col-2 section  */
+.about-col-2{
+    flex-basis: 60%;
+}
+
+/* .about-col-2 h1 section  */
+h1.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    animation: slideDown 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+@keyframes slideDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.about-col-2 p{
+    opacity: 0;
+    animation: slideLeft .6s ease-in-out forwards;
+    animation-delay: 1s;
+}
+@keyframes slideLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* .tab-titles section  */
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links.active-link{
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards;
+    animation-delay: 1.2s;
+}
+@keyframes slideUp {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.tab-links.active-link1{
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards;
+    animation-delay: 1.4s;
+}
+@keyframes slideUp {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.tab-links::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-links.active-link:hover::after{
+    width: 100%;
+}
+.tab-links.active-link1:hover::after{
+    width: 100%;
+}
+#main-skills{
+    display: flex;
+    gap: 70px;
+}
+#main-skills li{
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.tab-contents  li span{
+    color: #dd2654;
+    font-size: 17px;
+}
+.tab-contents li{
+    font-size: 22px;
+    padding: 5px;
+}
+
+/* li animation */
+li{
+    list-style: none;
+    opacity: 0;
+    animation: slideTop .8s ease-in-out forwards;
+}
+li:nth-child(odd){
+    animation-delay: 1.5s;
+}
+li:nth-child(even){
+    animation-delay: 1.7s;
+}
+@keyframes slideTop {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* media  */
+@media (max-width:768px) {
+    #user{
+        margin: 0;
+    }
+    .about-col-2 .sub-title{
+        font-size: 50px;
+    }
+    .about-col-2 p{
+        font-size: 15.5px;
+    }
+    .tab-titles .tab-links{
+        font-size: 25px;
+    }
+    #main-skills .tech-skills li{
+        font-size: 18px;
+    }
+    .about-col-2 .start{
+        display: none;
+    }
+}
+@media (max-width:425px) {
+    .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+    #user{
+        margin: 0;
+    }
+    #skills .design-skills li{
+        font-size: 18px;
+    }
+    #skills{
+        margin-bottom: 50px;
+    }
+    #education{
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:375px) {
+    .about-col-1 img{
+        margin-left: 40px;
+    }
+    .about-col-2 .sub-title{
+        font-size: 40px;
+    }
+    .tab-titles .tab-links{
+        font-size: 20px;
+    }
+}
+@media (max-width:320px) {
+    .about-col-1 img{
+        margin-left: 35px;
+    }
+    .about-col-2 .sub-title{
+        font-size: 35px;
+    }
+    .tab-titles .tab-links{
+        font-size: 20px;
+    }
+    .about-col-2 p{
+        font-size: 13px;
+    }
+    #main-skills{
+        gap: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

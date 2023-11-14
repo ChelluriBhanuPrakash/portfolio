@@ -1,0 +1,179 @@
+#navbar {
+    width: 100%;
+}
+
+/* nav section */
+nav {
+    width: 80%;
+    margin: 20px 152px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    position: fixed;
+    /* border-radius: 50px; */
+    /* backdrop-filter: blur(10px); */
+    z-index: 1000;
+}
+
+/* nav logo */
+.logo {
+    width: 170px;
+    opacity: 0;
+    animation: slideLeft 1s ease-in-out forwards;
+    animation-duration: 1s;
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* toggle icons */
+.menu-icon {
+    display: none;
+}
+
+/* ul section */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li:nth-child(1) {
+    opacity: 0;
+    animation: slideTop 0.1s ease-in-out forwards;
+    animation-duration: 1s;
+}
+
+nav ul li:nth-child(2) {
+    opacity: 0;
+    animation: slideTop 0.1s ease-in-out forwards;
+    animation-duration: 1.2s;
+}
+
+nav ul li:nth-child(3) {
+    opacity: 0;
+    animation: slideTop .1s ease-in-out forwards;
+    animation-duration: 1.6s;
+}
+
+nav ul li:nth-child(4) {
+    opacity: 0;
+    animation: slideTop .1s ease-in-out forwards;
+    animation-duration: 1.8s;
+}
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Link section */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* media  */
+
+@media (max-width:1024px) {
+    nav{
+        margin: 20px 100px;
+    }
+}
+@media (max-width:870px) {
+    .menu-icon {
+        display: block;
+        font-size: xx-large;
+    }
+
+    ul {
+        display: block;
+        position: absolute;
+        /* height: 350px; */
+        top: 55px;
+        right: -400px;
+        text-align: center;
+        width: 50%;
+        background-color: #ce0d4a;
+        padding: 10px 0;
+        transition: right 0.5s;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    li {
+        margin: 15px;
+    }
+
+    ul.open {
+        right: 0;
+    }
+}
+
+@media (max-width:768px) {
+    nav{
+        width: 80%;
+        margin: 10px 70px;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+@media (max-width:600px) {
+    nav{
+        width: 80%;
+        margin: 10px 40px;
+    }}
+
+@media (max-width:320px) {
+    nav{
+        width: 80%;
+        margin: 10px 30px;
+    }
+    
+}
