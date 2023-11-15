@@ -36,7 +36,7 @@ const Work = () => {
                             <div className="layer">
                                 <h1>Tado Application</h1>
                                 <p>Created a Todo application Using React. <br />The Width and height of the application increases based on the task added </p>
-                                <Link to="https://chelluribhanuprakash.github.io/cloneyt/" target="_blank" rel="noreferrer"><RiShareBoxFill className='icon' /></Link>
+                                <Link to="https://chelluribhanuprakash.github.io/todoapp/" target="_blank" rel="noreferrer"><RiShareBoxFill className='icon' /></Link>
                             </div>
                         </div>
                         <div className="work work-3">
@@ -71,7 +71,7 @@ const Work = () => {
                                 <div className="layer">
                                     <h1>Solar System</h1>
                                     <p>Created a basic Solar-System using HTML,CSS.</p>
-                                    <Link to="https://chelluribhanuprakash.github.io/js-quiz/" target='_blank' rel="noreferrer"><RiShareBoxFill className='icon' /></Link>
+                                    <Link to="https://chelluribhanuprakash.github.io/solarsystem/" target='_blank' rel="noreferrer"><RiShareBoxFill className='icon' /></Link>
                                 </div>
                             </div>
                         </div>
